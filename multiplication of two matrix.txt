@@ -1,0 +1,117 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int m,n;
+    cout<<"Enter the number of rows and columns for matrix A"<<endl;
+    cin>>m>>n;
+    int a[m][n];
+    
+    
+    cout<<"Enter the elements in matrix A"<<endl;
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    
+    cout<<"matrix A"<<endl;
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cout<<a[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    
+    
+    int p,q;
+    cout<<"Enter the number of rows and columns for matrix B"<<endl;
+    cin>>p>>q;
+    int b[p][q];
+    
+    cout<<"Enter the elements in matrix B"<<endl;
+    for(int i=0;i<p;i++)
+    {
+        for(int j=0;j<q;j++)
+        {
+            cin>>b[i][j];
+        }
+    }
+    
+    cout<<"matrix B"<<endl;
+    for(int i=0;i<p;i++)
+    {
+        for(int j=0;j<q;j++)
+        {
+            cout<<b[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+     
+    int arr[m][q];
+    
+    
+        for(int i=0;i<m;i++)
+        {
+            for(int j=0;j<q;j++)
+            {
+                arr[i][j]==0;
+            }
+        }
+        
+        
+        
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<q;j++)
+        {
+            for(int k=0;k<n;k++)
+            {
+                arr[i][j]+=a[i][k]*b[k][j];
+            }
+        }
+    }
+    
+    
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<q;j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
+    return 0;
+}
+
+OUTPUT:
+
+Enter the number of rows and columns for matrix A
+2
+2
+Enter the elements in matrix A
+1
+2
+3
+4
+matrix A
+1 2 
+3 4 
+Enter the number of rows and columns for matrix B
+2
+1
+Enter the elements in matrix B
+1
+2
+matrix B
+1 
+2 
+
+9 
+11 
