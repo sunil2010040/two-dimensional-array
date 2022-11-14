@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"enter the size of char array"<<endl;
+    cin>>n;
+    char a[n+1];
+    cout<<"enter the char in array"<<endl;
+    cin>>a;
+    
+    bool check=true;
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]!=a[n-i-1])
+        {
+            check=false;
+            break;
+        }
+    }
+    
+    if(check==false)
+    {
+        cout<<"this is not palindrome"<<endl;
+    }
+    
+    else
+    {
+        cout<<"this is palindrome"<<endl;
+    }
+}
+
+OUTPUT:
+
+enter the size of char array
+7
+enter the char in array
+racecar
+this is palindrome
