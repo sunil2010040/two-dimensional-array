@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,count=0,maxlength=0;
+    cin>>n;
+    cin.ignore();
+    char arr[n+1];
+    
+    cout<<"enter the string"<<endl;
+    cin.getline(arr,n);
+    
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]==' '||arr[i]=='\0')
+        {
+            if(count>maxlength)
+            {
+                maxlength=count;
+            }
+            count=0;
+        }
+        
+        else if(arr[i]=='\0')
+        {
+            break;
+        }
+        
+        else
+        {
+            count++;
+        }
+            
+        
+    }
+    
+    cout<<"length of maximum word"<<endl;
+    cout<<maxlength;
+    
+    return 0;
+}
+
+OUTPUT:
+
+50
+enter the string
+i love programming
+length of maximum word
+11
